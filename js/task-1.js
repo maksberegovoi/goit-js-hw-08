@@ -106,7 +106,6 @@ galleryContainer.addEventListener("click", (event) => {
     if (event.target.nodeName !== "IMG") {
         return;
     }
-    console.log(event.target.src);
 });
 
 document.querySelectorAll("img.gallery-image").forEach((img) => {
@@ -115,6 +114,5 @@ document.querySelectorAll("img.gallery-image").forEach((img) => {
         <img src="${img.dataset.source}" width="1112" height="640">
       `);
         instance.show();
-        console.log(img.src, img.original);
     };
 });
