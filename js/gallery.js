@@ -106,13 +106,9 @@ galleryContainer.addEventListener("click", (event) => {
     if (event.target.nodeName !== "IMG") {
         return;
     }
-});
 
-document.querySelectorAll("img.gallery-image").forEach((img) => {
-    img.onclick = () => {
-        const instance = basicLightbox.create(`
-        <img src="${img.dataset.source}" width="1112" height="640">
+    const instance = basicLightbox.create(`
+        <img src="${event.target.dataset.source}" width="1112" height="640">
       `);
-        instance.show();
-    };
+    instance.show();
 });
